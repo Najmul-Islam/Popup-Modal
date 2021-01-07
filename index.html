@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup()">&times;</div>
+      <h1>Title</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error asperiores ea odit ipsum eaque exercitationem
+        expedita eum tenetur quidem porro.
+      </p>
+    </div>
+  </div>
+
+  <button onclick="togglePopup()">Show Popup</button>
+
+
+  <script>
+    // For click event
+
+    // function togglePopup() {
+    //   document.getElementById("popup-1").classList.toggle("active");
+    // }
+
+    // For time event
+    
+    window.onload = setTimeout(function () {
+      document.getElementById("popup-1").classList.add('active')
+    }, 3000)
+    function togglePopup() {
+      document.getElementById("popup-1").classList.remove("active");
+    }
+
+  </script>
+</body>
+
+</html>
